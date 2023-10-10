@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{Colorcito}{HTML}{094B56}
+\colorlet{heading}{Colorcito}
+\colorlet{accent}{Colorcito}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Diego Canales}
+\tagline{AI/ML Engineer}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{2.5cm}{DC.jpg}
+\personalinfo{%
+  % Not all of  these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{dgcanales.r@gmail.com}
+%   \phone{000-00-0000}
+  \mailaddress{\href{https://www.linkedin.com/in/dgcanales/}{LinkedIn}}
+  \printinfo{\faGithub}{\href{https://github.com/dgcanalesr}{GitHub}}
+  
+  \location{\hspace{0.05cm} Santiago, Chile} %\hspace{0.87cm} 
+  \phone{(+56) 9 61049443} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experiencia Laboral}
+
+\cvevent{Data Science Engineer}{Unholster S.A.}{Marzo 2021 -- Julio 2023}{Santiago, Chile}
+\begin{itemize}
+\item Lideré equipo de 3 personas en el desarrollo de un sistema de pronóstico de ventas y transacciones para cadena de retail. 
+\item Levanté infraestructura en la nube para desplegar modelo de NLP para detección de sesgos en una API.
+\item Programé flujo de datos para automatizar proceso de cotización de piezas manufacturadas para fábrica estadounidense. Comunicación en inglés con el cliente.
+\item Realicé \textit{Web Scraping}, análisis de datos y visualizaciones desde múltiples fuentes.
+\item Construí un sistema de \textit{Speech-to-text} y NLP para el análisis de videos de sesiones del Congreso Nacional.
+
+\end{itemize}
+
+\divider
+
+\cvevent{Líder Técnico}{Smart Trace SpA}{Marzo 2020 -- Diciembre 2020}{Santiago, Chile}
+\begin{itemize}
+\item Co-fundador de startup enfocada en la detección y registro de violaciones del protocolo de distanciamiento social durante la pandemia por COVID-19 en Chile.
+\item Lideré el equipo técnico en el desarrollo de un sistema para medir y registrar la distancia entre dispositivos, usando la tecnología UWB.
+
+\end{itemize}
+
+\divider
+
+% \divider
+
+\cvsection {Proyectos Relevantes}
+%{\printinfo{\faWaveSquare}{\large\textbf{Inference Time Reduction of Audio Effects Models}}}
+{\printinfo{\faWaveSquare}{\normalsize\textbf{Reducción de Tiempos de Inferencia en Modelos de Efectos de Audio}}}
+
+\vspace{3pt}
+
+\begin{itemize}
+\item Tesis de Magíster, en el contexto de procesamiento de señales de audio de instrumentos musicales con \textit{Deep Learning}.
+\item Apliqué \textit{Knowledge Distillation} sobre el estado del arte en modelamiento de efectos de audio, para reducir tiempos de inferencia, favoreciendo su uso en tiempo real. 
+\item Se logró reducir el tiempo de inferencia al 50\%, con errores más bajos, destilando desde redes LSTM a redes GRU.
+\end{itemize}
+
+\divider
+
+{\printinfo{\faChartLine}{\normalsize\textbf{Pronóstico de Ventas para Cadena de Retail}} %large
+
+\vspace{3pt}
+\begin{itemize}
+\item Lideré equipo de 3 personas en desarrollo de un sistema de pronósticos para cadena de retail, utilizando Prophet y redes LSTM.
+\item Para 10 locales seleccionados como MVP, se obtuvieron errores más bajos que los del pronóstico interno del cliente, tanto en la predicción de ventas como en la de cantidad de transacciones.
+\item Estructuré el código del proyecto de forma modular para simplificar la integración con las prácticas de CI/CD en GCP que utiliza el cliente.
+
+\end{itemize}
+
+\divider
+
+{\printinfo{\faInfinity}{\normalsize\textbf{Despliegue de Modelo de NLP}} %large
+
+\vspace{3pt}
+\begin{itemize}
+\item Ejecuté despliegue de modelo de detección de sesgos en texto en una API en AWS, mediante \textit{Infrastructure as Code} con Terraform, utilizando los servicios Lambda y API Gateway.
+%\item b.
+
+\end{itemize}
+%\divider
+
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
